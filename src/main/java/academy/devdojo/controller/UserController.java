@@ -22,7 +22,7 @@ public class UserController {
     private final UserService userService;
     private final UserMapper mapper;
     @GetMapping()
-    public ResponseEntity<List<UserGetResponse>> animeList() {
+    public ResponseEntity<List<UserGetResponse>> userList() {
         log.info("Request received to list all users");
         var users = userService.findAll();
         var userGetResponses = mapper.toUserGetResponseList(users);
